@@ -2,9 +2,10 @@ import java.util.*;
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 
-class ElvesCarriesCalories {
+class TopElves {
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
+        
         
         //read list, when a row is "empty" add previos info to list a
         //repeat BUT this time check if current info is larger than previous, 
@@ -29,10 +30,11 @@ class ElvesCarriesCalories {
         System.out.println("An error occurred.");
         e.printStackTrace();
       }
+
         
             
 
-        /*numbers.add(1000);
+       /*numbers.add(1000);
         numbers.add(2000);
         numbers.add(3000);
         numbers.add(null);
@@ -48,10 +50,8 @@ class ElvesCarriesCalories {
         numbers.add(10000);
         System.out.println(numbers);*/
 
-        //elves = 0;
+        
         int elfCal = 0;
-        int elfCalB = 0;
-        int elfCalC = 0;
         int greatestElf = 0;
 
         for (int i = 0; i < numbers.size()-1; i++){
@@ -62,7 +62,6 @@ class ElvesCarriesCalories {
                    
                     elfCal = 0;
                 }
-
                 else{
                     elfCal = 0;
                     }
@@ -72,43 +71,11 @@ class ElvesCarriesCalories {
                 elfCal += (numbers.get(i));
                 //System.out.println("elfcal: " + elfCal);
             } 
-            if(numbers.get(i) == null){
-                if(elfCalB > greatestElf){
-                    greatestElf += (elfCalB);
-                   
-                    elfCalB = 0;
-                }
-                
-                else{
-                    elfCalB = 0;
-                    }
-                
-            }
-            else if(numbers.get(i) != null){
-                elfCal += (numbers.get(i));
-                //System.out.println("elfcal: " + elfCal);
-            } 
-            if(numbers.get(i) == null){
-                if(elfCalC > greatestElf){
-                    greatestElf += (elfCalC);
-                   
-                    elfCalC = 0;
-                }
-                
-                else{
-                    elfCalC = 0;
-                    }
-                
-            }
-            else if(numbers.get(i) != null){
-                elfCal += (numbers.get(i));
-                //System.out.println("elfcal: " + elfCal);
-            } 
+
+           
             }
             
 
             System.out.println("final: " + greatestElf);
         }
     }
-
-    
