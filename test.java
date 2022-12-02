@@ -20,3 +20,5 @@ System.out.println(elfs.get(0) + elfs.get(1) + elfs.get(2));
 
     }
 }
+
+//someone elses solution
